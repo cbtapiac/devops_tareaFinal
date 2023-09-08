@@ -19,5 +19,7 @@ jobs:
 
     - name: Build with Gradle
       run:
-       chmod +x gradlew
-       ./gradlew clean :service-a:build
+        chmod +x gradlew
+        ./gradlew build
+       
+       

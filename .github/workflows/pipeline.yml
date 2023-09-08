@@ -33,8 +33,7 @@ jobs:
       run: |
         DOCKER_USERNAME=$secrets.DOCKER_USERNAME
         DOCKER_PASSWORD=$secrets.DOCKER_PASSWORD
-        # Usar las credenciales para iniciar sesión en Docker Hub y realizar la implementación
-        echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      #  echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         
     - name: Docker Build
       run: |

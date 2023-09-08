@@ -23,7 +23,7 @@ jobs:
         ./gradlew clean :service-a:build
         
     - name: Analisis SonarCloud
-      run : |
+      run: |
          chmod +x gradlew
          ./gradlew build sonar - Dsonar.token=${{secrets.SONARTOKEN}}
 

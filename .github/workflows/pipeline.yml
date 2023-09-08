@@ -23,7 +23,6 @@ jobs:
         ./gradlew clean :service-a:build
         
 
-
     - name: Docker Login
       uses: docker/login-action@v2.2.0
       with:

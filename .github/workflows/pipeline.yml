@@ -51,4 +51,6 @@ jobs:
 
       - name: Deploy Kubernetes
         run:
-         kubectl apply -f $GITHUB_WORKSPACE/deploy/deplyment.yaml
+           docker pull cbtapiac/devops_tareaFinal
+           docker run -d -p 8081:8080 -e spring.profiles.active=prod -e serviceb.url=http://localhost:8082 -e servicec.url=http://localhost:8083 narramadan/spring-multi-module-service-service-a
+

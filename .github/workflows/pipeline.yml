@@ -36,7 +36,7 @@ jobs:
         # Usar las credenciales para iniciar sesión en Docker Hub y realizar la implementación
       
     - name: Docker Build
-      run: 
+      run: |
           docker build --tag cbtapiac/devops_tareaFinal:latest .
           docker images
          

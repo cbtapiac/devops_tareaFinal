@@ -21,7 +21,11 @@ jobs:
        run: |
         chmod +x gradlew
         ./gradlew clean :service-a:build
-
+        
+    - name: Analisis SonarCloud
+      run : |
+         chmod +x gradlew
+         ./gradlew build sonar - Dsonar.token=${{} secrets.SONARTOKEN}
 
     - name: Docker Login
       uses: docker/login-action@v2.2.0

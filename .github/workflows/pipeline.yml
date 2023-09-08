@@ -20,11 +20,34 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
 
-    - name: Build with Gradle
-      run:
-        chmod +x gradlew
-        /devops_tareaFinal/gradlew clean :service-a:build
+  #  - name: Build with Gradle
+  #    run:
+   #     chmod +x gradlew
+   #     /devops_tareaFinal/gradlew clean :service-a:build
 
    # - name: Analisis SonarCloud
       #  chmod +x gradlew
        # ./gradlew build sonar - Dsonar.token=${{} secrets.TOKEN_SONARCLOUD}
+
+    - name: Deploy
+      run: |
+        DOCKER_USERNAME=$secrets.DOCKER_USERNAME
+        DOCKER_PASSWORD=$secrets.DOCKER_PASSWORD
+        # Usar las credenciales para iniciar sesión en Docker Hub y realizar la implementación
+      
+    - name: Docker Build
+      run: 
+           docker build --tag cbtapiac/devops_tareaFinal:latest
+           docker images
+         
+    - name: Docker Push
+      run:
+         docker push  cbtapiac/devops_tareaFinal
+  
+  deploy:
+      needs: build
+      runs-on: self-hosted
+      steps:
+
+      - name: checkout
+        uses: actions/checkout@v3.5.3

@@ -37,7 +37,7 @@ jobs:
       
     - name: Docker Build
       run: 
-           docker build cbtapiac/devops_tareaFinal:latest
+           docker buildx build -t cbtapiac/devops_tareaFinal:latest .
            docker images
          
     - name: Docker Push

@@ -20,10 +20,10 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
 
-  #  - name: Build with Gradle
-  #    run:
-   #     chmod +x gradlew
-   #     /devops_tareaFinal/gradlew clean :service-a:build
+    -  name: Build with Gradle
+       run:
+        chmod +x gradlew
+        /devops_tareaFinal/gradlew clean :service-a:build
 
    # - name: Analisis SonarCloud
       #  chmod +x gradlew

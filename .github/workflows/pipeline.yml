@@ -21,7 +21,8 @@ jobs:
        run: |
         chmod +x gradlew
         ./gradlew clean :service-a:build
-        echo "${{ secrets.DOCKER_PASSWORD }}"
+        
+    - name : ${{ secrets.DOCKER_PASSWORD }}
         
     - name: Docker Login
       uses: docker/login-action@v2.2.0

@@ -17,13 +17,15 @@ jobs:
        java-version: '11'
        distribution: 'temurin'
 
-    #- name: Build with Gradle
-     # run:
-      #  chmod +x gradlew
-       # ./gradlew build
+    - name: Build with Gradle
+      run:
+        cd ..
+        chmod +x gradlew
+        ./gradlew build
 
-   # - name: Sonar Build Breaker
-   #    project_key: 
-   #    sonar_token:
-   #    sonar_url: 
-   #    sonar_branch: 
+   # - name: Analisis SonarCloud
+      #  chmod +x gradlew
+       # ./gradlew build 
+
+   #deploy:
+    # needs: build

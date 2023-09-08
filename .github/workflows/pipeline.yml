@@ -23,7 +23,7 @@ jobs:
     -  name: Build with Gradle
        run:
         chmod +x gradlew
-        /devops_tareaFinal/gradlew clean :service-a:build
+        ./gradlew clean :service-a:build
 
    # - name: Analisis SonarCloud
       #  chmod +x gradlew

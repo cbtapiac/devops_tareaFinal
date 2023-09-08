@@ -17,10 +17,10 @@ jobs:
        java-version: '11'
        distribution: 'temurin'
 
-   # - name: Build with Gradle
-    #  run:
-     #   chmod +x gradlew
-      #  .././gradlew build
+    - name: Build with Gradle
+      run:
+       chmod +x gradlew
+       ./.gradlew build
 
    # - name: Analisis SonarCloud
       #  chmod +x gradlew

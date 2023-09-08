@@ -27,12 +27,12 @@ jobs:
       #  chmod +x gradlew
        # ./gradlew build sonar - Dsonar.token=${{} secrets.TOKEN_SONARCLOUD}
        
-    - name: Login to Docker Hub 
-      uses: docker/login-action@v1
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-
+    - name: Deploy
+      run: |
+        DOCKER_USERNAME=$secrets.DOCKER_USERNAME
+        DOCKER_PASSWORD=$secrets.DOCKER_PASSWORD
+        # Usar las credenciales para iniciar sesión en Docker Hub y realizar la implementación
+      
     - name: Docker Build
       run: 
            docker build --tag cbtapiac/devops_tareaFinal:latest

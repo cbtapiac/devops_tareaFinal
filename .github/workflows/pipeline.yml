@@ -34,8 +34,8 @@ jobs:
         # Ejecutar el análisis de SonarCloud
         sonar-scanner \
           -Dsonar.login=${SONAR_TOKEN} \
-          -Dsonar.projectKey=mchacana22_article_dec_28_mavengradle-based-multi-module-spring-boot-microservices \
-          -Dsonar.organization=mchacana22 \
+          -Dsonar.projectKey=cbtapiac_devops_tareaFinal \
+          -Dsonar.organization=cbtapiac \
           -Dsonar.sources=.
 
         shell: bash

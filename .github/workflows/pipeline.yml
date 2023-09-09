@@ -22,7 +22,7 @@ jobs:
         chmod +x gradlew
         ./gradlew clean :service-a:build
 
-
+    
    # - name: SonarCloud Scan
    #   uses: cbtapiac/devops_tareaFinal@master
    #   env:
